@@ -14,6 +14,8 @@ void sortarr(int num[],int size){
         }
         else{
             swap(num[left],num[right]);
+            left++;
+            right--;
         }
     }
     
