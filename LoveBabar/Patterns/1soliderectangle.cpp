@@ -12,11 +12,10 @@ int main(){
     // }
 
     int p;
-    int q;
-    cin>>p>>q;
+    cin>>p;
 
     for(int i=0;i<p;i++){
-        for(int j = 0;j<q;j++){
+        for(int j = 0;j<p;j++){
             cout<<"* ";
         }
         cout<<endl;
