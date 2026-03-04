@@ -20,6 +20,14 @@ void insertathead(Node* &head,int value){
 }
 
 
+
+void insertattail(Node* &tail,int value){
+    Node* temp = new Node(value);
+    tail->next = temp; 
+    tail = temp;
+}
+
+
 void printsll(Node* head){
     while(head != NULL){
         cout<<head->data<<" ";
@@ -33,13 +41,18 @@ int main(){
 
     Node* node1 = new Node(10);
 
-    cout<<node1->data<<endl;
-    cout<<node1->next<<endl;
+    // cout<<node1->data<<endl;
+    // cout<<node1->next<<endl;
 
     Node* head = node1;
-    printsll(head);
-    insertathead(head,12);
-    insertathead(head,16);
+    Node* tail = node1;
+    // printsll(head);
+    // insertathead(head,12);
+    // insertathead(head,16);
+
+
+        insertattail(tail,12);
+        insertattail(tail,16);
 
     printsll(head);
     return 0;
