@@ -1,21 +1,28 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int getMax(int num[],int n){
+void  getMax(int num[],int n){
     int max = INT_MIN;
     int max2 = INT_MIN;
+    int max3 = INT_MIN;
     for(int i=0;i<n;i++){
         if(num[i] > max  ){
+            max3 = max2;
             max2 = max;
             max = num[i];
+            
         }
         if(num[i] < max && num[i] > max2){
+            max3 = max2;
             max2 = num[i];
             
         }
+        if(num[i]< max2 && num[i] > max3){
+            max3 = num[i];
+        }
     }
-
-    return max2;
+    cout<<max<<" "<<max2<<" "<<max3<<endl;
+    return;
 }
 
 
@@ -29,7 +36,7 @@ int main(){
         cin>>num[i];
     }
 
-    cout<<"maximum number in array is:"<<getMax(num,size);
+    getMax(num,size);
     
 
     return 0;
