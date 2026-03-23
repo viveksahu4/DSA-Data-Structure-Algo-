@@ -25,6 +25,9 @@ int main(){
     s.push(3);
     s.push(4);
 
+
     print(s);
+
+    cout<<endl<<"size of stack is: "<<s.size()<<endl;
 
 }
