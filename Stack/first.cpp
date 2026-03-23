@@ -8,10 +8,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 void print(stack<int>s){
+    if(s.empty()){
+        cout<<"stack is empty"<<endl;
+    }
+    else{
     while(!s.empty()){
     cout<<s.top()<<" ";
     s.pop();
     }
+}
 }
 int main(){
     stack<int>s;
