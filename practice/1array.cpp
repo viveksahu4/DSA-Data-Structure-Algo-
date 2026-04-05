@@ -1,4 +1,4 @@
-//3.Insert element at end 
+//4.
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
@@ -11,34 +11,65 @@ int main(){
         cin>>arr[i];
 
     }
+    
+    int pos,value;
+    cin>>pos>>value;
 
-    cout<<"Without Insert O/P: ";
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-
+    for(int i=n;i>pos;i--){
+        arr[i] = arr[i - 1];
     }
-    cout<<endl;
-
-
-    int value;
-    cout<<"Enter element you want to insert: ";
-    cin>>value;
-    arr[n] = value;
+    arr[pos] = value;
     n++;
 
-    cout<<endl;
-    cout<<"Final o/p with Insert: ";
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
-
     }
 
 
-    return 0;
+}
+
+
+// //3.Insert element at end 
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int n;
+//     cout<<"Enter size of array: ";
+//     cin>>n;
+//     int arr[n];
+//     cout<<"Enter element of the array: ";
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];
+
+//     }
+
+//     cout<<"Without Insert O/P: ";
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+
+//     }
+//     cout<<endl;
+
+
+//     int value;
+//     cout<<"Enter element you want to insert: ";
+//     cin>>value;
+//     arr[n] = value;
+//     n++;
+
+//     cout<<endl;
+//     cout<<"Final o/p with Insert: ";
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+
+//     }
+
+
+//     return 0;
 
 
     
-}
+// }
 
 
 
