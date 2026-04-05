@@ -1,21 +1,52 @@
-// normal array operation 
+// 2. duplicate check
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int n;
-    cout<<"Enter size of the array: ";
-    cin>>n;
-    int arr[n];
-    cout<<endl;
-    cout<<"Enter the element in the array: ";
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-    }
+    vector<int> arr = {12,34,12,89};
+    bool check = true;
+    for(int i=0;i<arr.size();i++){
+        for(int j = arr.size() - 1;j>i;j--){
+            if(arr[j] == arr[i]){
+                check  = false;
+                break;
 
-    cout<<"Array result or you can say output: ";
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
+            }
+        }
+    }
+    if(check){
+        cout<<"No duplicate";
+    }
+    else{
+        cout<<"duplicate";
     }
 
     return 0;
 }
+
+
+
+
+
+
+
+// 1.// normal array operation 
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int n;
+//     cout<<"Enter size of the array: ";
+//     cin>>n;
+//     int arr[n];
+//     cout<<endl;
+//     cout<<"Enter the element in the array: ";
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+
+//     cout<<"Array result or you can say output: ";
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+//     }
+
+//     return 0;
+// }
