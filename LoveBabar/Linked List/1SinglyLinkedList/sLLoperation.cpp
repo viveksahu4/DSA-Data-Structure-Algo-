@@ -28,6 +28,24 @@ void insertattail(Node* &tail,int value){
 }
 
 
+void insertatpos(Node* &head,int pos,int value){
+    if(pos == 1){
+        insertathead(head,value);
+         return;
+    }
+     Node* temp = head;
+     int i = 1;
+     while( i < pos - 1){
+        temp  = temp->next;
+        i++;
+     }
+
+     Node* nodetoinsert = new Node(value);
+     nodetoinsert -> next = temp->next;
+     temp->next = nodetoinsert;
+
+}
+
 void printsll(Node* head){
     while(head != NULL){
         cout<<head->data<<" ";
@@ -54,6 +72,9 @@ int main(){
         insertattail(tail,12);
         insertattail(tail,16);
 
+    printsll(head);
+
+    insertatpos(head,3,333);
     printsll(head);
     return 0;
 }
